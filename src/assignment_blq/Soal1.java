@@ -30,14 +30,14 @@ public class Soal1 {
 		int iBuku = 0;
 
 		for (iKacamata = 0; iKacamata < hargaKacamata.length && jumlah_uang >= hargaKacamata[iKacamata]; iKacamata++) {
-			jumlah_uang -= hargaKacamata[iKacamata];
+			jumlah_uang = jumlah_uang-hargaKacamata[iKacamata];
 			count++;
 			messagekacamata = "kaca_mata " + hargaKacamata[iKacamata];
 			if (messagekacamata != null && !messagekacamata.isEmpty()) {
 				message += messagekacamata + " ";
 			}
 			for (iBaju = 0; iBaju < hargaBaju.length && jumlah_uang >= hargaBaju[iBaju]; iBaju++) {
-				jumlah_uang -= hargaBaju[iBaju];
+				jumlah_uang = jumlah_uang-hargaBaju[iBaju];
 				count++;
 				messagebaju += "baju " + hargaBaju[iBaju];
 				if (messagebaju != null && !messagebaju.isEmpty()) {
@@ -45,14 +45,14 @@ public class Soal1 {
 				}
 
 				for (iSepatu = 0; iSepatu < hargaSepatu.length && jumlah_uang >= hargaSepatu[iSepatu]; iSepatu++) {
-					jumlah_uang -= hargaSepatu[iSepatu];
+					jumlah_uang = jumlah_uang-hargaSepatu[iSepatu];
 					count++;
 					messagesepatu = "sepatu " + hargaSepatu[iSepatu];
 					if (messagesepatu != null && !messagesepatu.isEmpty()) {
 						message += messagesepatu + " ";
 					}
 					for (iBuku = 0; iBuku < hargaBuku.length && jumlah_uang >= hargaBuku[iBuku]; iBuku++) {
-						jumlah_uang -= hargaBuku[iBuku];
+						jumlah_uang = jumlah_uang-hargaBuku[iBuku];
 						count++;
 						messagebuku = "buku " + hargaBuku[iBuku];
 						// iBuku++;
@@ -60,11 +60,11 @@ public class Soal1 {
 							message += messagebuku + " ";
 						}
 					}
-					// iSepatu++;
+					
 				}
-				// iBaju++;
+				
 			}
-			// iKacamata++;
+			
 		}
 		System.out.println("Jumlah item yang dibeli: " + count);
 		System.out.print("(" + message + ")");
