@@ -27,6 +27,5 @@ public class Soal9 {
 		  deret_penjumlahan(3);
 		  deret_penjumlahan(4);
 		  deret_penjumlahan(5);
-		  deret_penjumlahan(10);
 	  } 
 }
